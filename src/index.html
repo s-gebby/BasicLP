@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kyla Gebhart - Real Estate Agent</title>
+    <link rel="stylesheet" href="styles/output.css" />
+    <style>
+      .button-row {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .icon-button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+      }
+      .icon-button:hover {
+        background-color: #f0f0f0;
+      }
+      .icon-button svg {
+        width: 24px;
+        height: 24px;
+      }
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+      .modal-content {
+        margin: 15% auto;
+        padding: 20px;
+        width: 100%;
+        max-width: 500px;
+        border-radius: 50%;
+      }
+      .modal-content img {
+        border-radius: 50%;
+        width: 100%;
+        height: auto;
+      }
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 15px;
+        right: 35px;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body
+    class="animate-lavender-dream flex items-center justify-center h-screen"
+  >
+    <div class="max-w-sm mx-auto bg-white p-8 rounded-lg shadow-lg text-center">
+      <div
+        class="w-24 h-24 rounded-full overflow-hidden mx-auto cursor-pointer"
+        id="profilePic"
+      >
+        <img
+          class="w-full h-full object-cover"
+          src="Headshot.jpg"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="mt-6">
+        <h1 class="text-2xl font-semibold">Kyla Gebhart</h1>
+        <p class="mt-2 text-gray-600">
+          Kyla has been licensed with the Nevada Real Estate Division since 2003
+          (S.57059)-Simply Vegas, and Oklahoma Real Estate Commission since 2021
+          (S.202409)-Metro First Realty. Kyla holds a bachelor’s degree in
+          Business Marketing from the University of Nevada Las Vegas, and is a
+          2013 & 2019 YPN 40 under 40 recipient.
+        </p>
+        <div class="button-row">
+          <a
+            href="https://www.instagram.com/kylagebhart/"
+            class="icon-button"
+            aria-label="Instagram"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/kylagebhart/"
+            class="icon-button"
+            aria-label="LinkedIn"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+          <a href="tel:+17023764332" class="icon-button" aria-label="Call">
+            <svg
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+          <a
+            href="mailto:Kylagebhart@gmail.com"
+            class="icon-button"
+            aria-label="Email"
+          >
+            <svg
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+      <span class="close" id="closeModal">&times;</span>
+      <div class="modal-content">
+        <img src="Headshot.jpg" alt="Profile Picture" />
+      </div>
+    </div>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
